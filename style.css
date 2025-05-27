@@ -1,0 +1,339 @@
+/* -----------------------------------
+   Starter CSS for CSS Zen Garden Exercise (Flexbox Edition)
+   ----------------------------------- */
+
+/* 1. CSS Reset + Box-Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. CSS Variables (Custom Properties) */
+:root {
+  /* Color Palette */
+  --primary-color: #40403F;
+  --secondary-color: #756C4C;
+  --accent-color: #F5C325;
+  --text-color: white;
+  --background-color: #313131;
+
+  /* Typography */
+  --font-stack: 'Helvetica Neue', Arial, sans-serif;
+  --base-font-size: 16px;
+  --line-height: 1.6;
+
+  /* Layout */
+  --max-width: 1200px;
+  --gutter: 1rem;
+}
+
+/* 3. Base Styles */
+html {
+  font-size: var(--base-font-size);
+  line-height: var(--line-height);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-stack);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+a:hover, a:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* 4. Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-stack);
+  color: var(--primary-color);
+  margin-bottom: var(--gutter);
+}
+
+p {
+  line-height: 1.6rem;
+  margin-bottom: var(--gutter);
+}
+
+/* 5. Layout Utilities (Flexbox) */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gutter);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.gap-1 { gap: var(--gutter); }
+
+/* 6. Sectioning Elements */
+header, nav, main, section, article, aside, footer {
+  margin-bottom: var(--gutter);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #A88A2A;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-size: xx-large;
+}
+
+h1,h2 {
+  color: var(--text-color);
+}
+
+.bij {
+  scale: 20%;
+  position: relative;
+  bottom: 58rem;
+  left: 60rem;
+  margin-bottom: -50rem;
+}
+
+
+.summary{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  text-align: center;
+  padding: 25px;
+  margin-right: 60rem;
+  margin-left: 35px;
+  margin-top: 10rem;
+  position: relative;
+  z-index: 1;
+}
+
+.summary a {
+  color: var(--primary-color);
+}
+
+.benefits{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: var(--accent-color);
+  border-radius: 35px;
+  color: black;
+  padding: 10px;
+  margin-left: 40rem;
+  margin-right: 12rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -60rem;
+}
+
+.benefits h3{
+  color: black;
+  font-size: xx-large;
+}
+
+.bijbenefits{
+  position: relative;
+  top: 20.92rem;
+  right: 14rem;
+  display: block;
+  border-radius: 10rem;
+  scale: 22.1%;
+}
+
+
+
+.participation {
+  background-color: var(--primary-color);
+  padding-left: 10%;
+  padding-right: 35%;
+}
+
+.participation h3 {
+  font-size: xx-large;
+}
+
+.requirements {
+  background-color: var(--primary-color);
+  padding-left: 10%;
+  padding-right: 35%;
+
+}
+
+.requirements h3 {
+  font-size: xx-large;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
+
+nav a {
+  color: #fff;
+  padding: 0.5rem;
+}
+
+/* Intro Section */
+
+
+.preamble{
+  padding-left: 40%;
+  padding-right: 2%;
+  margin-top: -30px;
+  margin-bottom: -3rem;
+  padding-bottom: 3rem;
+
+}
+
+.explanation{
+  padding-right: 2%;
+  padding-left: 5%;
+  padding-bottom: 25px;
+}
+
+
+
+/* Main Section */
+.preamble, .explanation {
+  background-color: var(--secondary-color);
+  color: black;
+  margin-left: 8rem;
+}
+
+.explanation h3{
+  margin-top: -20px;
+}
+
+.preamble h3, .explanation h3 {
+  color: black;
+  font-size: xx-large;
+}
+
+.preamble p:nth-child(4) {
+  margin-bottom: 0;
+}
+
+/* Article Styles */
+article {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  margin-right: 10px;
+}
+
+.zen-resources {
+  background-color: var(--secondary-color);
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  margin-left: 55rem;
+  margin-top: -40rem;
+  position: relative;
+  z-index: 1;
+}
+
+.bij_res{
+  position: relative;
+  top: 19px;
+  right: 5rem;
+  margin-top: -20rem;
+  display: block;
+  scale: 28.5%;
+}
+
+
+/* Sidebar */
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Navigation */
+nav {
+  margin: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 5px 0;
+}
+
+.design-selection, .design-name, .designer-name {
+  text-align: center;
+}
+
+/* Box styles for highlights */
+h3 {
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 7. Utility Classes */
+.text-center { text-align: center; }
+.mt-1 { margin-top: var(--gutter); }
+.mb-1 { margin-bottom: var(--gutter); }
+.p-1 { padding: var(--gutter); }
+.hide { display: none !important; }
+
+/* -----------------------------------
+   End of Starter CSS
+----------------------------------- */
